@@ -28,9 +28,21 @@ TodoCtrl.prototype.addTodo = function(){
 
 TodoCtrl.prototype.clearComplete = function(){
   for (i=this.todos.length-1; i>=0; i--){
-    // console.log(i + " " + this.todos[i].done);
     if (this.todos[i].done === true) {
       this.todos.splice(i, 1);
     }
   }
 };
+// OR
+//   for (i in this.todos){
+//     if (this.todos[i].done) {
+//       this.todos.splice(i, 1);
+//     }
+//   }
+// };
+
+
+// TodoCtrl.disabledButton = function (){
+//   if 
+// }
+

@@ -35,7 +35,7 @@
         Repeat this list element for each todo in the controller's 
         list of todos
       -->
-      <li class="list-group-item" ng-repeat="todo in ctrl.todos | filter:clearComplete">
+      <li class="list-group-item" ng-repeat="todo in ctrl.todos">
         <!--TODO #3: 
           set the class of this label to "done" when the todo's
           done property is true.
@@ -56,8 +56,11 @@
       Only show the corresponding type of todo based on what is 
       selected here.
     -->
-
-    
+    <select ng-model="">
+      <option value=" " selected="selected">All</option>
+      <option value="active">Active</option>
+      <option value="complete">Complete</option>
+    </select>
     <!--TODO #5: 
       When this button is clicked remove any todos form the list of 
       todos where done is set to true. Disable this button if 
