@@ -13,6 +13,7 @@ function TodoCtrl() {
     {label: 'Active', showTodo: function(todo) {return !todo.done;}},
     {label: 'Complete', showTodo: function(todo) {return todo.done;}}
   ]
+  this.selected=this.filters[0];
 }
 
 app.controller('TodoCtrl', TodoCtrl);
@@ -45,4 +46,8 @@ TodoCtrl.prototype.clearComplete = function(){
 // TodoCtrl.disabledButton = function (){
 //   if 
 // }
+
+
+
+
 
